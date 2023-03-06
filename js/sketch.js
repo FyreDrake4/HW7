@@ -47,7 +47,7 @@ function draw() {
         text("Press Spacebar to initilize Audio. :D", 100, 50);
         if (!initTone) {
             text("Audio Initilized", 100, 100);
-            text("Click to Play the Sound");
+            text("Click to Play the Sound", 100, 150);
         }
     }
 }
