@@ -24,7 +24,7 @@ osc.connect(ampEnv);
 //     release: 0.8,
 // }).connect(gain);
 
-// let noiseFiler = new Tone.Filter(800, "lowpass");
+let noiseFilter = new Tone.Filter(800, "lowpass").connect(ampEnv);
 
 function preload() {
     gunPicture = loadImage("assets/whistle.jpg");
@@ -37,9 +37,6 @@ function setup() {
 
 function draw() {
     background(220);
-    // if (frameCount % 60 === 0) {
-    //     pitch = random(300, 600);
-    // }
     if (showPicture) {
         image(gunPicture, 0, 0);
         text("Hold Down Left Click and drag around for music", 450, 300);
